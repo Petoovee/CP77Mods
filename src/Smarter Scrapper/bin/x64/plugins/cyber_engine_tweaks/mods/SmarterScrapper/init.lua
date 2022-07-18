@@ -4,6 +4,7 @@ local defaults = {
 	ClothesRare = false,
 	ClothesUncommon = false,
 	ClothesCommon = true,
+	WeaponsKnife = false,
 	WeaponsLegendary = false,
 	WeaponsEpic = false,
 	WeaponsRare = false,
@@ -29,7 +30,7 @@ local settings = {
 	ClothesRare = false,
 	ClothesUncommon = false,
 	ClothesCommon = true,
-	WeaponsKnives = false,
+	WeaponsKnife = false,
 	WeaponsLegendary = false,
 	WeaponsEpic = false,
 	WeaponsRare = false,
@@ -135,15 +136,15 @@ function SetupSettingsMenu()
 	end)
 
 	nativeSettings.addSubcategory("/scrapper/mods", GetLocalizedText("LocKey#49863") .. " - " .. GetLocalizedText("LocKey#261"))
-	nativeSettings.addSwitch("/scrapper/mods", GetLocalizedText("LocKey#1816"), "", settings.ModRare, defaults.ModRare, function(state)
+	nativeSettings.addSwitch("/scrapper/mods", GetLocalizedText("LocKey#1816"), "", settings.ModsRare, defaults.ModsRare, function(state)
 		settings.ModsRare = state
 		SaveSettings()
 	end)
-	nativeSettings.addSwitch("/scrapper/mods", GetLocalizedText("LocKey#1817"), "", settings.ModUncommon, defaults.ModUncommon, function(state)
+	nativeSettings.addSwitch("/scrapper/mods", GetLocalizedText("LocKey#1817"), "", settings.ModsUncommon, defaults.ModsUncommon, function(state)
 		settings.ModsUncommon = state
 		SaveSettings()
 	end)
-	nativeSettings.addSwitch("/scrapper/mods", GetLocalizedText("LocKey#1814"), "", settings.ModCommon, defaults.ModCommon, function(state)
+	nativeSettings.addSwitch("/scrapper/mods", GetLocalizedText("LocKey#1814"), "", settings.ModsCommon, defaults.ModsCommon, function(state)
 		settings.ModsCommon = state
 		SaveSettings()
 	end)
